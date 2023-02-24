@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1 class="text-blue">Boilerplate HTML+CSS+JS</h1>
-    <img src="assets/images/logo-top-ucamp.png" alt="logo">
-    <script src="assets/js/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Aplicación CRUD</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-blue">Logo APP</h1>
+      <!-- <img src="assets/images/logo-top-ucamp.png" alt="logo" /> -->
+      <h1>Personaliza tu Aplicación CRUD</h1>
+      <label for="Tema">Selecciona una temática para tu aplicación:</label>
+      <select id="Tema" name="Tema">
+        <option value="">Selecciona tematica</option>
+        <option value="TO_DO">TO DO List</option>
+        <option value="Biblioteca">Biblioteca de Libros</option>
+        <option value="Inventario">Inventario</option>
+        <option value="Listado">Listado de Estudiantes</option>
+      </select>
+      <button type="submit">Enviar</button>
+      <script src="assets/js/index.js"></script>
+    </header>
+    <form id="crud-form">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" /><br />
+      <label for="phone">Teléfono:</label>
+      <input type="tel" id="phone" name="phone" /><br />
+      <button type="submit" id="submit-btn">Enviar</button>
+    </form>
+    <footer>
+      <h3>Aplicación con fines académicos, creada por Andrés Ballén</h3>
+    </footer>
+  </body>
 </html>
