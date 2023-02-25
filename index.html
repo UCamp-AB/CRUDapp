@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <title>Aplicación CRUD</title>
   </head>
@@ -11,29 +17,86 @@
     <header>
       <h1 class="text-blue">Logo APP</h1>
       <!-- <img src="assets/images/logo-top-ucamp.png" alt="logo" /> -->
-      <h1>Personaliza tu Aplicación CRUD</h1>
-      <label for="Tema">Selecciona una temática para tu aplicación:</label>
-      <select id="Tema" name="Tema">
-        <option value="">Selecciona tematica</option>
-        <option value="TO_DO">TO DO List</option>
-        <option value="Biblioteca">Biblioteca de Libros</option>
-        <option value="Inventario">Inventario</option>
-        <option value="Listado">Listado de Estudiantes</option>
-      </select>
-      <button type="submit">Enviar</button>
-      <script src="assets/js/index.js"></script>
     </header>
-    <form id="crud-form">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" /><br />
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" /><br />
-      <label for="phone">Teléfono:</label>
-      <input type="tel" id="phone" name="phone" /><br />
-      <button type="submit" id="submit-btn">Enviar</button>
-    </form>
+    <main>
+      <div class="container">
+        <h1>Personaliza tu Aplicación CRUD</h1>
+        <label for="Tema">Selecciona una temática para tu aplicación:</label>
+        <select id="Tema" name="Tema">
+          <option value="">Selecciona tematica</option>
+          <option value="TO_DO">TO DO List</option>
+          <option value="Biblioteca">Biblioteca de Libros</option>
+          <option value="Inventario">Inventario</option>
+          <option value="Agenda">Agenda de Contactos</option>
+        </select>
+        <button class="row" type="submit" id="submitBtn">Comenzar</button>
+      </div>
+    </main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <button
+            type="button"
+            class="btn btn-primary mt-3"
+            id="changeThemeBtn"
+          >
+            Cambiar tema
+          </button>
+        </div>
+      </div>
+      <h1>CRUD en localstorage</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <form>
+            <div class="form-group">
+              <label for="inputName">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputName"
+                placeholder="Ingresa nombre"
+              />
+              <label for="inputPuesto">Puesto</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputPuesto"
+                placeholder="Ingresa Puesto"
+              />
+            </div>
+            <div class="row">
+              <div class="col text-end">
+                <button type="button" class="btn btn-primary mt-3" id="saveBtn">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-12 mt-5">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Puesto</th>
+                <th class="text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
     <footer>
       <h3>Aplicación con fines académicos, creada por Andrés Ballén</h3>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

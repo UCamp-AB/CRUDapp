@@ -7,9 +7,9 @@
 .text-blue {
     color: #007bff;
 }
-body{
+/* body{
     background-color: gainsboro;
-}
+} */
 header{
     display: flex;
     align-items: center;
@@ -19,21 +19,49 @@ header{
     padding: 20px;
 }
 
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
 #Tema{
     height:30px;
     color: whitesmoke;
-    background-color: black;
+    background-color: gray;
 }
 
-button{
-    height: 30px;
-    width: 100px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    border-color: white;
-    cursor: pointer;
+.container{
+    border: black 2px dashed;
+    
 }
+button{
+    background: black;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border:none;
+    position: relative;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,red,blue,deeppink,blue,red,deeppink,blue);
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+
 
 footer{
     background-color: black;
@@ -45,4 +73,9 @@ footer{
     bottom: 0;
     width: 100%;
     height: 100px;
+}
+
+footer h3{
+    font-style: oblique;
+    font-size: 20px;
 }
