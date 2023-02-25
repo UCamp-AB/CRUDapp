@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const tableBody = document.getElementById("tableBody");
   let tema = document.getElementById("Tema");
 
+  document.getElementById("crud").style.display = "none"; //Carga información apenas inicializa
   function loadData() {
-    document.getElementById("crud").style.display = "none"; //Carga información apenas inicializa
     loadTheme();
     tableBody.innerHTML = `
         <tr id="noData">
@@ -22,15 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("noData").remove();
     }
 
-    data.forEach((element, index) => {
+    data.forEach((item, index) => {
       let tr = document.createElement("tr");
       tr.innerHTML = `
       <td>${index + 1}</td>
-      <td>${element.FirstInput}</td>
-      <td>${element.SecondInput}</td>
+      <td>${item.primero}</td>
+      <td>${item.segundo}</td>
       <td class="text-center">
-      <button type="button" class="btn-warning btn-edit" data-index="${index}">Editar</button>;
-      <button type="button" class="btn-danger btn-delete" data-index="${index}">Eliminar</button>
+      <button type="button" class="btn-warning btn-edit" data-index="${index}" style="font-size: 1.5rem;">🖊</button>
+      <button type="button" class="btn-danger btn-delete" data-index="${index}" style="font-size: 1.5rem;">🗑</button>
       </td>`;
       tableBody.appendChild(tr);
     });
@@ -98,16 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!primero) {
       return;
     }
-    let data = JSON.parse(localStorage.getItem("data")) || [];
+    const data = JSON.parse(localStorage.getItem("data")) || [];
     const index = saveBtn.getAttribute("data-index");
+    console.log(index, "index")
     if (index) {
       data[index] = { primero, segundo };
       saveBtn.removeAttribute("data-index");
       saveBtn.textContent = "Guardar";
     } else {
       data.push({
-        FirstInput: primero,
-        SecondInput: segundo,
+        primero:primero,
+        segundo:segundo,
       });
     }
     localStorage.setItem("data", JSON.stringify(data));
@@ -144,8 +145,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const index = e.target.dataset.index;
       const data = JSON.parse(localStorage.getItem("data")) || [];
       const item = data[index];
-      inputName.value = item.name;
-      inputPuesto.value = item.puesto;
+      FirstInput.value = item.primero;
+      SecondInput.value = item.segundo;
       saveBtn.textContent = "Actualizar";
       saveBtn.setAttribute("data-index", index);
     } else if (e.target.classList.contains("btn-delete")) {
