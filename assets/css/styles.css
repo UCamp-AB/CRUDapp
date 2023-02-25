@@ -10,6 +10,7 @@
 /* body{
     background-color: gainsboro;
 } */
+
 header{
     display: flex;
     align-items: center;
@@ -21,11 +22,21 @@ header{
 
 main{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding: 20px;
 }
+
+.inicial{
+    display: flex;
+    text-align: center;
+    /* flex-direction: column; */
+    gap: 12px;
+    align-items: center;
+    width: fit-content;
+    margin: 10px;
+}
+
 
 #Tema{
     height:30px;
@@ -35,8 +46,8 @@ main{
 
 .container{
     border: black 2px dashed;
-    
 }
+
 button{
     background: black;
     cursor: pointer;

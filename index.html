@@ -16,10 +16,13 @@
   <body>
     <header>
       <h1 class="text-blue">Logo APP</h1>
+      <button type="button" class="btn btn-primary" id="changeThemeBtn"
+          >Cambiar tema
+          </button>
       <!-- <img src="assets/images/logo-top-ucamp.png" alt="logo" /> -->
     </header>
     <main>
-      <div class="container">
+      <div class="inicial">
         <h1>Personaliza tu Aplicación CRUD</h1>
         <label for="Tema">Selecciona una temática para tu aplicación:</label>
         <select id="Tema" name="Tema">
@@ -29,38 +32,31 @@
           <option value="Inventario">Inventario</option>
           <option value="Agenda">Agenda de Contactos</option>
         </select>
-        <button class="row" type="submit" id="submitBtn">Comenzar</button>
+        <button  type="submit" id="comenzar">Comenzar</button>
       </div>
     </main>
-    <div class="container">
+    <div class="container" id="crud">
       <div class="row">
         <div class="col-md-12">
-          <button
-            type="button"
-            class="btn btn-primary mt-3"
-            id="changeThemeBtn"
-          >
-            Cambiar tema
-          </button>
         </div>
       </div>
-      <h1>CRUD en localstorage</h1>
+      <h1 id="Titulo">Aquí aparecerá el CRUD con la temática escogida</h1>
       <div class="row">
         <div class="col-md-12">
           <form>
             <div class="form-group">
-              <label for="inputName">Nombre</label>
+              <label for="FirstInput" id="FirstInput2">Nombre</label>
               <input
                 type="text"
                 class="form-control"
-                id="inputName"
+                id="FirstInput"
                 placeholder="Ingresa nombre"
               />
-              <label for="inputPuesto">Puesto</label>
+              <label for="SecondInput" id="SecondInput2">Puesto</label>
               <input
                 type="text"
                 class="form-control"
-                id="inputPuesto"
+                id="SecondInput"
                 placeholder="Ingresa Puesto"
               />
             </div>
@@ -78,9 +74,9 @@
           <table class="table table-bordered">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Puesto</th>
+                <th class="text-center">ID</th>
+                <th id="titulo1" class="text-center">Nombre</th>
+                <th id="titulo2" class="text-center">Puesto</th>
                 <th class="text-center">Acciones</th>
               </tr>
             </thead>
