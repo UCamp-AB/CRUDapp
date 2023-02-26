@@ -9,8 +9,9 @@
 }
 
 body{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 
 header{
@@ -111,7 +112,7 @@ button::before{
 }
 
 footer{
-    margin-bottom: auto;
+    margin-top: auto;
     padding: 15px;
     background-color: black;
     color: white;
