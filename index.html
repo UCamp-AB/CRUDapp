@@ -11,14 +11,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/images/CulturaHSE.JPG" />
+    <script src="https://kit.fontawesome.com/2e14a36541.js"></script>
     <title>Aplicación CRUD</title>
   </head>
   <body>
     <header>
-      <h1 class="text-blue">Logo APP</h1>
-      <button type="button" class="btn btn-primary" id="changeThemeBtn"
-          >Cambiar tema
-          </button>
+    <img src="assets/images/CulturaHSE.JPG" alt="BallOrStore" class="logo" />
+    <h1 class="Titulo-pag">CRUD-App</h1>
+    <button type="button" class="btn btn-secondary" id="changeThemeBtn">Cambiar tema</button>
       <!-- <img src="assets/images/logo-top-ucamp.png" alt="logo" /> -->
     </header>
     <main>
@@ -36,13 +37,9 @@
       </div>
     </main>
     <div class="container" id="crud">
-      <div class="row">
-        <div class="col-md-12">
-        </div>
-      </div>
-      <h1 id="Titulo">Aquí aparecerá el CRUD con la temática escogida</h1>
-      <div class="row">
-        <div class="col-md-12">
+      <h1 id="Titulo" class="text-center">Aquí aparecerá el CRUD con la temática escogida</h1>
+      <div id="crud-form" class="row">
+        <div  class="col-md-12">
           <form>
             <div class="form-group">
               <label for="FirstInput" id="FirstInput2">Nombre</label>
@@ -86,7 +83,15 @@
       </div>
     </div>
     <footer>
-      <h3>Aplicación con fines académicos, creada por Andrés Ballén</h3>
+    <h3>Aplicación con fines académicos, creada por Andrés Ballén</h3>
+    <div class="redes-sociales">
+        <ul>
+            <li>
+            <a href="https://github.com/UCamp-AB/landing-yeti/tree/master" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+    </div>
+    <h3>Bogotá, Colombia</h3>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

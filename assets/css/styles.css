@@ -7,17 +7,39 @@
 .text-blue {
     color: #007bff;
 }
-/* body{
-    background-color: gainsboro;
-} */
+
+body{
+    display: flex;
+    flex-direction: column;
+}
 
 header{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+header .logo{
+    width: 100px;
+    height: 120px;
+    padding: 10px;
+    text-align:center;
+}
+
+header .Titulo-pag{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: black;
-    color: whitesmoke;
-    padding: 20px;
+    padding: 10px;
+}
+
+.btn-secondary{
+    display: flex;
+    align-items: center;
+    height: max-content;
+    width: max-content;
 }
 
 main{
@@ -25,18 +47,22 @@ main{
     justify-content: center;
     align-items: center;
     padding: 20px;
+    height: 100%;
 }
 
 .inicial{
     display: flex;
     text-align: center;
-    /* flex-direction: column; */
+    align-items: center;
     gap: 12px;
     align-items: center;
     width: fit-content;
     margin: 10px;
 }
 
+h1 .text-center{
+    padding-top: 10px;
+}
 
 #Tema{
     height:30px;
@@ -46,8 +72,19 @@ main{
 
 .container{
     border: black 2px dashed;
+    padding: 25px;
+    padding-top: 20px;
 }
 
+form label{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+form ::placeholder{
+    font-style: oblique
+}
 button{
     background: black;
     cursor: pointer;
@@ -73,20 +110,80 @@ button::before{
     animation: glowing 20s linear infinite;
 }
 
-
 footer{
+    margin-bottom: auto;
+    padding: 15px;
     background-color: black;
     color: white;
+}
+
+.redes-sociales ul{
+    position: relative;
     display: flex;
-    align-items: center;
+}
+
+.redes-sociales ul li{
+    list-style: none;
+    margin: 0 5px;
+    display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
+    align-content: center;
+}
+
+.redes-sociales ul li .fab{
+    font-size: 20px;
+    transition: .3s;
+    line-height: 30px;
+    color: black;
+    text-align: center;
+}
+
+.redes-sociales ul li .fab:hover{
+    color:#fff;
+}
+
+.redes-sociales ul li a{
+    position:relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(245, 243, 243);
+    text-align: center;
+    transition: .6s;
+}
+
+.redes-sociales ul li a:hover{
+    transform: translate(0,-15%);
+}
+
+.redes-sociales ul li:nth-child(1) a:hover{
+    background-color: rgb(44, 117, 221);
+}
+.redes-sociales ul li:nth-child(2) a:hover{
+    background: linear-gradient(220.55deg, #DD7BFF 0%, #FF6C6C 100%);
+}
+.redes-sociales ul li:nth-child(3) a:hover{
+    background-color: rgb(18, 140, 102);
+}
+.redes-sociales ul li:nth-child(4) a:hover{
+    background-color: rgb(0,0,0);
 }
 
 footer h3{
     font-style: oblique;
     font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+.inicial{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 12px;
+    align-items: center;
+    width: fit-content;
+    margin: 10px;
+}
 }
